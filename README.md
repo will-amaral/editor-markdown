@@ -4,7 +4,7 @@ Projeto simples de editor markdown escrito em ReactJS. Esse projeto foi criado c
 fins educacionais.
 
 Você pode visualizar o editor em funcionamento aqui: 
-[Demonstração](https://will-amaral.github.io/editor-markdown).
+[Demonstração](https://will-amaral.github.io/editor-markdown){:target="_blank"}.
 
 ## Como usar
 ### Pré-requisitos
