@@ -1,0 +1,7 @@
+# Diretórios
+node_modules/
+dist/
+
+# Logs
+logs
+*.log
