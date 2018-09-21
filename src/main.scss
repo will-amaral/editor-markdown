@@ -1,3 +1,5 @@
+$content-heading-line-height: 1;
+
 @charset 'utf-8';
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/base/_all';
@@ -17,4 +19,15 @@ html {
 
 .hero-head {
 	padding-top: 4rem;
+}
+
+.textarea:not([rows]) {
+	min-height: 300px;
+	max-height: 300px;
+}
+
+.box {
+	min-height: 300px;
+	max-height: 300px;
+	overflow: auto;
 }
