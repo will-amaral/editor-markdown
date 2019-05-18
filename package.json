@@ -8,10 +8,11 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "NODE_ENV=production webpack --mode production",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "bulma": "^0.7.1",
+    "bloomer": "^0.6.5",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "remarkable": "^1.7.1"
@@ -21,6 +22,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "bulma": "^0.7.1",
     "css-loader": "^1.0.0",
     "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",

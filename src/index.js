@@ -2,9 +2,23 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Remarkable from 'remarkable';
 import './main.scss';
+import {
+	Hero,
+	HeroHeader,
+	HeroBody,
+	HeroFooter,
+	Content,
+	Title,
+	Subtitle,
+	Container,
+	Columns,
+	Column,
+	TextArea,
+	Box,
+	Footer
+} from 'bloomer';
 
 const md = new Remarkable();
-
 
 class App extends Component {
 	constructor(props) {
@@ -19,42 +33,42 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="hero is-fullheight">
-				<div className="hero-head">
-					<div className="content has-text-centered">
-						<h1 className="title is-1">Editor Markdown</h1>
-					</div>
-				</div>
-				<div className="hero-body">
-					<div className="container">
-						<div className="columns is-centered">
-							<div className="column">
-								<div className="content">
-									<h1 className="title">Entrada</h1>
-									<p className="subtitle">Entre aqui seu texto em markdown</p>
-								</div>
-								<textarea className="textarea is-danger" onChange={this.handleChange} />
-							</div>
-							<div className="column">
-								<div className="content">
-									<h1 className="title">Saída</h1>
-									<p className="subtitle">Código Markdown compilado</p>
-								</div>
-								<div className="box">
-									<div className="content" dangerouslySetInnerHTML={{__html: md.render(this.state.text)}}/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="hero-foot">
-					<footer className="footer">
-						<div className="content has-text-centered">
+			<Hero>
+				<HeroHeader>
+					<Content hasTextAlign="centered">
+						<Title isSize={1}>Editor Markdown</Title>
+					</Content>
+				</HeroHeader>
+				<HeroBody>
+					<Container>
+						<Columns>
+							<Column>
+								<Content>
+									<Title>Entrada</Title>
+									<Subtitle tag="p"isSize={5}>Entre aqui seu texto em markdown</Subtitle>
+								</Content>
+								<TextArea onChange={this.handleChange}/>
+							</Column>
+							<Column>
+								<Content>
+									<Title>Saída</Title>
+									<Subtitle tag="p"isSize={5}>Código markdown compilado</Subtitle>
+								</Content>
+								<Box>
+									<Content dangerouslySetInnerHTML={{__html: md.render(this.state.text)}}/>
+								</Box>
+							</Column>
+						</Columns>
+					</Container>
+				</HeroBody>
+				<HeroFooter>
+					<Footer>
+						<Content hasTextAlign="centered">
 							<p>Criado por <a href="https://will.amaral.io">Willian Amaral</a></p>
-						</div>
-					</footer>
-				</div>
-			</div>
+						</Content>
+					</Footer>
+				</HeroFooter>
+			</Hero>
 		);
 	}
 }
